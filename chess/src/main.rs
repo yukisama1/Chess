@@ -2,6 +2,7 @@ mod board;
 mod pieces;
 
 fn main () {
-    let board= board::build_board();
-    println!("Deine mum");
+    let mut chessboard= board::build_board();
+    chessboard = board::add_all_pieces(chessboard);
+    print!("{:#?}", chessboard);
 }
