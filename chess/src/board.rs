@@ -1,5 +1,7 @@
-mod pieces;
+use crate::pieces;
 
-fn main() {
-      let board [[pieces::Pieces, 8], 8];
+pub fn build_board() -> [[Option<pieces::Pieces>; 8]; 8] {
+      let board = [[None; 8]; 8];
+
+      board
 } 

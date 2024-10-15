@@ -1,4 +1,5 @@
-enum Pieces {
+#[derive(Copy)]
+enum Figures {
     Pawn,
     King,
     Queen,
@@ -7,17 +8,16 @@ enum Pieces {
     Rook,
 }
 
-struct Pawn {
-    kind: Pieces,
+#[derive(Copy)]
+enum Players {
+    Player1,
+    Player2,
+}
+
+#[derive(Copy)]
+pub struct Pieces {
+    kind: Figures,
     posx: u8,
     posy: u8,
-    player: bool,
-}
-
-struct King {
-    kind: P
-}
-
-fn main () {
-
+    player: Players,
 }
