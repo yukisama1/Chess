@@ -55,7 +55,7 @@ pub fn validate_move(figure: Figure,orx: usize, ory: usize, x: usize, y: usize) 
     // check possible moves one piece after another
     // Pawn
     match figure {
-        Figure::Pawn=> println!("test"),
+        Figure::Pawn=> println("test"),
         Figure::Rook => if (difx > 0 && dify == 0) || (difx == 0 && dify > 0) {
             return true;
         } else {

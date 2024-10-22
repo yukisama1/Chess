@@ -41,15 +41,16 @@ pub fn add_all_pieces(mut board: [[Option<pieces::Piece>; 8]; 8]) -> [[Option<pi
 
 pub fn move_piece(mut board: [[Option<pieces::Piece>; 8]; 8], orposx: usize, orposy: usize, posx: usize, posy: usize) -> [[Option<pieces::Piece>; 8]; 8]{
       let mut arraycontent = board[orposy][orposx];
-      // if arraycontent.is_some() {
-      //     let figure = piece.kind;
-      //     if pieces::validate_move(figure, orposx, orposy) {
-            
-      //     } else {
-      //         println!("unvalid move");
-      // //     }
-      // } else {
-  
-      // }
+      if arraycontent.is_some() {
+          let figure = piece.kind;
+          if pieces::validate_move(figure, orposx, orposy) {
+            board[posy][posx] = board[orposy][orposx];
+            board[orposy][orposx] = None;
+          } else {
+              println!("unvalid move");
+          }
+      } else {
+            println1("theres no Piece on this field");
+      }
       board
   }
